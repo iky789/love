@@ -50,7 +50,7 @@ function showPasswordPrompt() {
 function logout() {
     sessionStorage.removeItem('username');
     alert('You have logged out successfully!');
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 }
 
 // Load saved gallery items from localStorage
