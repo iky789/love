@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./stle.css">
 </head>
 <body>
-     <!-- Loading Screen -->
-     <div id="loading-screen" class="loading-screen">
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
         <div class="processing-message">Please wait...</div>
         <div class="spinner"></div> <!-- Loading spinner -->
     </div>
@@ -66,26 +66,29 @@
                 </div>
             </div>
         </section>
-<!-- Secure Tab Section -->
-<section class="secure-section">
-    <button onclick="showPasswordPrompt()">Unlock Our Secret Tab</button>
 
-    <!-- Hidden Content -->
-    <div id="secret-content" class="secret-content" style="display: none;">
-        <h3>Our Most Private Memories</h3>
-        <p><em>"Love knows no boundaries." - Unknown</em></p>
-        <img src="./nm/IMG-20250403-WA0032.jpg" alt="Private Memory 1" class="gallery-item">
-        <img src="./nm/IMG-20250403-WA0031.jpg" alt="Private Memory 2" class="gallery-item">
-    </div>
-</section>
+        <!-- Secure Tab Section -->
+        <section class="secure-section">
+            <button onclick="showPasswordPrompt()">Unlock Our Secret Tab</button>
 
-<!-- Gallery Upload Section -->
-<section class="gallery-upload-section">
-    <h2>Upload New Memories</h2>
-    <input type="file" id="file-upload" accept="image/*, video/*" onchange="previewFile(event)">
-    <div id="gallery-uploaded" class="gallery"></div>
-</section>
+            <!-- Hidden Content (Initially Locked) -->
+            <div id="secret-content" class="secret-content" style="display: none;">
+                <h3>Our Most Private Memories</h3>
+                <p><em>"Love knows no boundaries." - Unknown</em></p>
+                <img src="./nm/IMG-20250403-WA0032.jpg" alt="Private Memory 1" class="gallery-item">
+                <img src="./nm/IMG-20250403-WA0031.jpg" alt="Private Memory 2" class="gallery-item">
+            </div>
+        </section>
 
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <h2>Our Photo Gallery</h2>
+            <div class="gallery">
+                <img src="./nm/IMG-20250403-WA0026.jpg" alt="Memory 1" class="gallery-item">
+                <img src="./nm/IMG-20250403-WA0029.jpg" alt="Memory 2" class="gallery-item">
+                <img src="./nm/IMG-20250403-WA0027.jpg" alt="Memory 3" class="gallery-item">
+            </div>
+        </section>
 
           <!-- Love Meter Section -->
           <div class="love-meter-section">
