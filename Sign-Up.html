@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Create Your Account</h1>
+        <form id="signupForm" onsubmit="return signUp()">
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+    <script>
+        // Function to handle sign-up
+        function signUp() {
+            const username = document.getElementById("newUsername").value;
+            const password = document.getElementById("newPassword").value;
+
+            if (username && password) {
+                // Store the new user data in sessionStorage (simulated)
+                sessionStorage.setItem("username", username);
+                sessionStorage.setItem("password", password);
+
+                alert("Account created successfully. Please log in!");
+                window.location.href = "login.html";  // Redirect to login page
+            } else {
+                alert("Please fill in both fields.");
+            }
+
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html>

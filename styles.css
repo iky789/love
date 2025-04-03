@@ -1,0 +1,182 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Ensure full height of the viewport */
+    margin: 0;  /* Remove default margin */
+    background: linear-gradient(135deg, #ff66b2, #ff99cc); /* Soft pink background */
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Container for floating hearts */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+/* Floating Hearts */
+.heart1, .heart2, .heart3 {
+    position: absolute;
+    background-color: #ff66b2;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    animation: floatHearts 8s ease-in-out infinite;
+}
+
+.heart2 {
+    width: 70px;
+    height: 70px;
+    animation-duration: 9s;
+}
+
+.heart3 {
+    width: 50px;
+    height: 50px;
+    animation-duration: 7s;
+}
+
+.heart1::before, .heart2::before, .heart3::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ff66b2;
+}
+
+.heart1::before {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.heart1::after {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+@keyframes floatHearts {
+    0% { transform: translateY(0) rotate(45deg); opacity: 0.8; }
+    50% { transform: translateY(-200px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(0) rotate(45deg); opacity: 0.8; }
+}
+
+/* Styling for the login form container */
+.login-form {
+    position: relative;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Tabs for login and sign-up */
+.tab {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+.tab-btn.active {
+    border-bottom: 2px solid #ff6a00;
+}
+
+/* Form Content */
+.form-content {
+    display: none;
+}
+
+.form-content.active {
+    display: block;
+}
+
+input {
+    width: 250px;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+    text-align: center;
+}
+
+button {
+    width: 260px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ee0979, #ff6a00);
+}
+
+/* Forgot Password Link */
+.links {
+    margin-top: 10px;
+}
+
+.links a {
+    color: #f39c12;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 4px;
+}
+
+/* Floating Love Quotes */
+.love-quotes {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    animation: floatQuotes 10s ease-in-out infinite;
+}
+
+.quote {
+    margin: 10px;
+    animation: floatQuotes 10s ease-in-out infinite;
+}
+
+/* Floating animation for Quotes */
+@keyframes floatQuotes {
+    0% { transform: translateY(0) translateX(-50%); opacity: 0.9; }
+    50% { transform: translateY(-20px) translateX(-50%); opacity: 1; }
+    100% { transform: translateY(0) translateX(-50%); opacity: 0.9; }
+}

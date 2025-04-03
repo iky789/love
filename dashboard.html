@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Dashboard</title>
+    <link rel="stylesheet" href="./stle.css">
+</head>
+<body>
+     <!-- Loading Screen -->
+     <div id="loading-screen" class="loading-screen">
+        <div class="processing-message">Please wait...</div>
+        <div class="spinner"></div> <!-- Loading spinner -->
+    </div>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Welcome to Our Love Story, <span id="username">User</span>!</h1>
+        </header>
+
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <div class="profile">
+                <img src="./nm/IMG-20250327-WA0080.jpg" alt="Your Picture" class="profile-picture">
+                <h2>Appiah Isaac</h2>
+                <p><em>"The love of my life."</em></p>
+            </div>
+            <div class="profile">
+                <img src="./nm/IMG-20250403-WA0026.jpg" alt="Girlfriend's Picture" class="profile-picture">
+                <h2>Natasha Agyen</h2>
+                <p><em>"My forever and always."</em></p>
+            </div>
+        </section>
+
+        <!-- Memories Section -->
+        <section class="memories-section">
+            <h2>Our Memories</h2>
+            <ul>
+                <li><strong>First Date:</strong> Our first date was at the beautiful beach. We watched the sunset together. It was magical.</li>
+                <li><strong>Our First Trip:</strong> We went to Paris for our anniversary. It was a dream come true!</li>
+                <li><strong>Special Day:</strong> The day we decided to be together forever, and we sealed it with a kiss under the stars.</li>
+            </ul>
+        </section>
+
+        <!-- Quotes Section -->
+        <section class="quotes-section">
+            <h3>Our Relationship Quotes:</h3>
+            <blockquote>"You are my sun, my moon, and all my stars." – E.E. Cummings</blockquote>
+            <blockquote>"Love is not finding someone to live with; it’s finding someone you can’t imagine living without." – Rafael Ortiz</blockquote>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="timeline-section">
+            <h2>Our Journey</h2>
+            <div class="timeline">
+                <div class="event">
+                    <h3>First Meeting</h3>
+                    <p>We met at college, and instantly felt a connection. It was a life-changing moment!</p>
+                </div>
+                <div class="event">
+                    <h3>First Anniversary</h3>
+                    <p>We celebrated our first anniversary with a romantic dinner by the beach.</p>
+                </div>
+                <div class="event">
+                    <h3>Engagement</h3>
+                    <p>We got engaged during a surprise trip to Paris! Best day of our lives!</p>
+                </div>
+            </div>
+        </section>
+<!-- Secure Tab Section -->
+<section class="secure-section">
+    <button onclick="showPasswordPrompt()">Unlock Our Secret Tab</button>
+
+    <!-- Hidden Content -->
+    <div id="secret-content" class="secret-content" style="display: none;">
+        <h3>Our Most Private Memories</h3>
+        <p><em>"Love knows no boundaries." - Unknown</em></p>
+        <img src="./nm/IMG-20250403-WA0032.jpg" alt="Private Memory 1" class="gallery-item">
+        <img src="./nm/IMG-20250403-WA0031.jpg" alt="Private Memory 2" class="gallery-item">
+    </div>
+</section>
+
+<!-- Gallery Upload Section -->
+<section class="gallery-upload-section">
+    <h2>Upload New Memories</h2>
+    <input type="file" id="file-upload" accept="image/*, video/*" onchange="previewFile(event)">
+    <div id="gallery-uploaded" class="gallery"></div>
+</section>
+
+
+          <!-- Love Meter Section -->
+          <div class="love-meter-section">
+            <h2>Our Love Meter</h2>
+            <div class="love-meter">
+                <div class="progress-bar">
+                    <div class="progress" id="progress-bar"></div>
+                </div>
+                <div class="ruler">
+                    <span class="mark" style="left: 0%;">0%</span>
+                    <span class="mark" style="left: 100%;">100%</span>
+                </div>
+                <p id="love-meter-percentage">Our love is at 0%!</p>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer class="dashboard-footer">
+            <button onclick="logout()">Log Out</button>
+        </footer>
+    </div>
+
+    <script src="./dasjava.js"></script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #ff66b2, #ff99cc);
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+/* Loading Screen Styling */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 2rem;
+}
+
+.processing-message {
+    margin-bottom: 20px;
+}
+
+.spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #ff66b2;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* Dashboard Container */
+.dashboard-container {
+    width: 80%;
+    margin: 30px auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+}
+
+.dashboard-header span {
+    color: #ffcc00;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-bottom: 10px;
+}
+
+.profile h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.profile p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Memories Section */
+.memories-section {
+    margin-bottom: 30px;
+}
+
+.memories-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.memories-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.memories-section li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Quotes Section */
+.quotes-section {
+    margin-bottom: 30px;
+}
+
+.quotes-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.quotes-section blockquote {
+    font-style: italic;
+    font-size: 1.3rem;
+    margin: 15px 0;
+}
+
+/* Timeline Section */
+.timeline-section {
+    margin-bottom: 30px;
+}
+
+.timeline-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.event h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Gallery Section */
+.gallery-section {
+    margin-bottom: 30px;
+}
+
+.gallery-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Love Meter Section */
+.love-meter-section {
+    margin-bottom: 30px;
+}
+
+.love-meter-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.love-meter {
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: #ff66b2;
+    border-radius: 20px;
+    transition: width 2s ease-in-out;
+}
+
+.ruler {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    position: relative;
+}
+
+.mark {
+    position: absolute;
+    top: 25px;
+    font-size: 12px;
+}
+
+#love-meter-percentage {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+/* Footer Section */
+.dashboard-footer {
+    margin-top: 30px;
+}
+
+.dashboard-footer button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-footer button:hover {
+    background-color: #ff3385;
+}
+
+/* Secure Section */
+.secure-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.secret-content {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3385;
+}
+
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery {
+        flex-direction: column;
+    }
+
+    .gallery-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .timeline {
+        flex-direction: column;
+    }
+}
+
+.profile-picture:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+.gallery-upload-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery-item {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.gallery-upload-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery-item-container {
+    position: relative;
+    display: inline-block;
+}
+
+.gallery-item {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.remove-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.remove-btn:hover {
+    background: darkred;
+}
+
