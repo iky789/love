@@ -12,7 +12,7 @@ if (username) {
         document.getElementById('dashboard-container').style.display = 'block';
     }, 3000); // Adjust the time as per your preference (5000ms = 5 seconds)
 } else {
-    window.location.href = 'login.html'; // Redirect to login if not logged in
+    window.location.href = 'index.html'; // Redirect to login if not logged in
 }
 
 // Love Meter Dynamic Update
