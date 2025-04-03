@@ -125,3 +125,8 @@ function previewFile(event) {
 
 // Load gallery items when the page loads
 window.onload = loadGallery;
+// Function to close the locked tab
+function closeLockedTab() {
+    const lockedTab = document.querySelector('.locked-tab');
+    lockedTab.style.display = 'none'; // Hides the locked tab
+}
